@@ -7,4 +7,10 @@ public class BoxingCoach implements Coach {
 		return "10 rounds on the bag";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
