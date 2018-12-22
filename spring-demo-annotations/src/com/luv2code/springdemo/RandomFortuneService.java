@@ -12,7 +12,7 @@ public class RandomFortuneService implements FortuneService {
 			"Beaware of the wolf in sheep´s clothing",
 			"Diligence is the motherFucker of good luck",
 			"Go hard or go home",
-			"Still udefeated",
+			"Still undefeated",
 			};
 	// create a random number generator
 	private Random myRandom = new Random();

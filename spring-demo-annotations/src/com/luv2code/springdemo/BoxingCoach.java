@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class BoxingCoach implements Coach {
 	//Nos evitamos el set para este campo
 	@Autowired
-	@Qualifier("randomFortuneService")
+	@Qualifier("fileFortuneService")
 	private FortuneService fortuneService;
 	
 	// define default constructor
