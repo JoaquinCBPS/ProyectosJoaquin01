@@ -5,7 +5,6 @@ import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -58,13 +57,13 @@ public class BoxingCoach implements Coach {
 		return fortuneService.getFortune();
 	}
 
-	@Override
+	
 	public String getEmail() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public String getTeam() {
 		// TODO Auto-generated method stub
 		return null;

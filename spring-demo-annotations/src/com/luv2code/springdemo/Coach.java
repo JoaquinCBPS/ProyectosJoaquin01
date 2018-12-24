@@ -6,8 +6,6 @@ public interface Coach {
 	
 	public String getDailyFortune();
 	
-	public String getEmail();
 	
-	public String getTeam();
 
 }

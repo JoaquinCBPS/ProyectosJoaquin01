@@ -16,13 +16,13 @@ public class TennisCoach implements Coach {
 		return null;
 	}
 
-	@Override
+	
 	public String getEmail() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public String getTeam() {
 		// TODO Auto-generated method stub
 		return null;
