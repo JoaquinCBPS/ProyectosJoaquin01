@@ -4,6 +4,7 @@ var app = angular.module('universidadApp',[ ]);
 app.controller('profesorCtrl',function($scope){
 
 	$scope.profesor = profesorData;
+	$scope.editando = {};  
 
 });
 
