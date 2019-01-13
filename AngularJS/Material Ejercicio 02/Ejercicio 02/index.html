@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="universidadApp">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Ejercicio 02 - Profesor</title>
@@ -11,17 +11,67 @@
         <!-- Incluir AngularJS -->
         <script src="js/lib/angular.min.js"></script>
 
+        <script src="js/app.js"></script>
+
 
     </head>    
     <body>
 
-        <div class="container">
-            
+        <div class="container" ng-controller="profesorCtrl as profe">
+            <h1>Profesor</h1>
+            <h4>{{ profesor.nombre }} </h4>
+            <hr>
+
+            <div class="row">
+                
+                <!-- Div que contiene la imagen del profesor -->
+                <div class="col-sm-3">
+                    <section class="panel">
+                        <div class="panel-body" align="center">
+                            <img ng-src="{{ profe.profesor.foto }}" class="img-circle" alt="" width="150px" height="150px">
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Div, donde se mostrará la bio del profesor -->
+                <div class="col-sm-9">
+                    <section class="panel">
+                        <div class="panel-body">
+                            {{ profesor.bio }}
+                            <br>
+                            <br>
+                            <strong>Edad:</strong> {{ profe.profesor.edad }}  años   
+                        </div>
+                    </section>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-9">
+                        <section class="panel">
+                            <div class="panel-body">
+
+                                Nombre: 
+                                <input type="text" class="form-control" ng-model="profesor.nombre">
+                                <br>
+
+                                Edad:
+                                <input type="text" class="form-control" ng-model="profesor.edad">
+                                <br>
+                                Bio:
+                                <textarea class="form-control" ng-model="profesor.bio" rows="5"></textarea>
+                                <br>
+
+                            </div>
+                        </section>
+                    </div>  
+                </div>      
 
 
-            
-           
-        </div>
 
+
+        </div>  
+
+
+                
     </body>
 </html>
