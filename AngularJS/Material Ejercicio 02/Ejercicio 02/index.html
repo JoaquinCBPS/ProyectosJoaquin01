@@ -28,7 +28,7 @@
                 <div class="col-sm-3">
                     <section class="panel">
                         <div class="panel-body" align="center">
-                            <img ng-src="{{ profe.profesor.foto }}" class="img-circle" alt="" width="150px" height="150px">
+                            <img ng-src="{{ profesor.foto }}" class="img-circle" alt="" width="150px" height="150px">
                         </div>
                     </section>
                 </div>
@@ -40,7 +40,9 @@
                             {{ profesor.bio }}
                             <br>
                             <br>
-                            <strong>Edad:</strong> {{ profe.profesor.edad }}  años   
+                            <strong>Edad:</strong> {{ profesor.edad }}  años
+                            <br>
+                            <button class="btn btn-primary" ng-click="EditaProfesor()">Editar</button>
                         </div>
                     </section>
                 </div>
@@ -51,15 +53,18 @@
                             <div class="panel-body">
 
                                 Nombre: 
-                                <input type="text" class="form-control" ng-model="profesor.nombre">
+                                <input type="text" class="form-control" ng-model="editando.nombre">
                                 <br>
 
                                 Edad:
-                                <input type="text" class="form-control" ng-model="profesor.edad">
+                                <input type="text" class="form-control" ng-model="editando.edad">
                                 <br>
                                 Bio:
-                                <textarea class="form-control" ng-model="profesor.bio" rows="5"></textarea>
+                                <textarea class="form-control" ng-model="editando.bio" rows="5"></textarea>
                                 <br>
+                                <br>
+                                <button class="btn btn-primary" ng-click="GuardarCambios()">Guardar</button>
+                                <button class="btn btn-danger" ng-click="CancelarCambios()">Cancelar</button>
 
                             </div>
                         </section>
