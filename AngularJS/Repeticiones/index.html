@@ -26,7 +26,33 @@
             <h4>Manejando repeticiones</h4>
             <hr>
 
-            
+            <ul>
+                <li ng-repeat="nombre in listado">
+                    {{ nombre }}
+                </li>
+            </ul>
+
+            <table class="table table-striped">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Clase</th>
+                </tr>
+                <tr ng-repeat="profesor in listadoProfesores" >
+                    <th>{{ profesor.nombre }}</th>
+                    <th>{{ profesor.edad }}</th>
+                    <th>{{ profesor.clase }}</th>
+                </tr>
+            </table>
+
+            <ul>
+                <li ng-repeat="numero in [1,2,3,4,5,6,7,8,9,10]">
+                    2 x {{ numero }}  = {{ 2*numero }}
+                </li>
+
+            </ul>
+
+            {{ listadoProfesores | json}}
 
 
         </div><!-- fin del listadoCtrl -->
