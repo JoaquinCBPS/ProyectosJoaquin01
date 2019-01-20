@@ -25,7 +25,18 @@
             <h4>Repeticiones para elementos</h4>
             <hr>
 
-            
+            Seleccione el pais: {{paisSeleccionado}}
+            <select ng-model="paisSeleccionado" class="form-control">
+                <option value="">Seleccione </option>
+                <option ng-repeat="pais in paises" value="{{ pais.id }}">{{ pais.nombre }}</option>
+            </select>
+
+
+            <br>
+            Selección del país:
+            <select ng-model="paisSeleccionado" class="form-control" ng-options="pais.id as pais.nombre for pais in paises">
+                <option value="" ng-checked="pais.nombre">Seleccione</option >
+            </select>
 
 
 
