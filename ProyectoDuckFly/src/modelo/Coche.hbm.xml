@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 02-dic-2018 17:07:18 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="duckfly" dynamic-insert="false" dynamic-update="false" mutable="true" name="modelo.Coche" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="coche">
+        <id name="matricula" type="string">
+            <column length="10" name="matricula"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="marca" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="marca" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="modelo" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="modelo" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="fechaMatriculacion" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="fechaMatriculacion" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="cocheXl" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="cocheXL"/>
+        </property>
+        <property generated="never" lazy="false" name="averia" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="averia"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="cocheConductors" optimistic-lock="true" sort="unsorted" table="coche_conductor">
+            <key on-delete="noaction">
+                <column length="10" name="matricula" not-null="true"/>
+            </key>
+            <one-to-many class="modelo.CocheConductor" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

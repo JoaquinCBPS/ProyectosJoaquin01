@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Registro</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
+	<link rel="shortcut icon" href="assets/images/patonejo-icon.png" />
+<!-- 	<!--Libreria externas--> -->
+<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script> -->
+<!-- 	<!--Librerias propias--> -->
+<!-- 	<script src="http://localhost:8080/ProyectoDuckFlyHibernate/assets/js/formulario.js"></script> -->
+<!-- 	<!--Script para gestión de la página--> -->
+<!-- 	<script src="http://localhost:8080/ProyectoDuckFlyHibernate/assets/js/login.js"></script> -->
+</head>
+
+<body>
+<section class="contenedor">
+	</br>
+	<div class="logo">
+		<img src="assets/images/patonejo-icon.png" height="100%" width="100%"></img>
+	</div>
+	</br></br>
+	<div align="center" size="100px"><h1><b> Bienvenidos a DUCK FLY</b></h1></div>
+	<article>
+		<div class="formulario">
+		<!-- Formulario con validación propia por jS. Se añade novalidate para desactivar validación HTML5 -->
+			<form action='Registrar' method='POST' id="loginForm" name="form3" novalidate>
+				<fieldset id="registrate">
+				<legend align="center">Registrate</legend>
+					<div class="form-linea">
+						<label for="usuario">Usuario:<span class="required"></span></label>
+						<input class="input" type="text" name="usuario" id="usuario" size="15" required>
+						<span class="form-helper"></span>
+					</div>
+					
+					<div class="form-linea">
+						<label for="password">Contraseña:<span class="required"></span></label> 
+						<input class="input" type="password" name="password" id="password" size="15"required>
+						<span class="form-helper"></span>
+					</div>
+					
+					<div class="form-linea">
+						<label for="dni">DNI:<span class="required"></span></label>
+						<input class="input" type="text" name="dni" id="dni" value="" size="9"required>
+						<span class="form-helper"></span>
+					</div>
+						
+					<div class="form-linea">
+						<label for="nombre">Nombre:<span class="required"></span></label>
+						<input class="input" type="text" name="nombre" id="nombre" value="" size="10" maxlength="50"required>
+						<span class="form-helper"></span>
+					</div>
+					
+					<div class="form-linea">
+						<label for="apellidos">Apellidos:<span class="required"></span></label>
+						<input class="input" type="text" name="apellidos" id="apellidos" value="" size="10"required>
+						<span class="form-helper"></span>
+					</div>
+					
+					<div class="form-linea">
+						<label for="email">Email:<span class="required"></span></label>
+						<input class="input" type="email" name="email" id="email" value="" size="50"required>
+						<span class="form-helper"></span>
+					</div>
+					
+					<div class="form-linea">
+						<label for="telefono">Telefono:<span class="required"></span></label>
+						<input class="input" type="number" name="telefono" id="telefono" value="" size="10"required>
+						<span class="form-helper"></span>
+					</div>
+					
+					<div class="form-linea">
+						<label for="nacimiento">Fecha de nacimiento:<span class="required"></span></label>
+						<input class="input" type="date" name="nacimiento" id="nacimiento" value="" size="11"required>
+						<span class="form-helper"></span>
+					</div>
+					
+					<div class="form-linea">
+						<label for="direccion">Direccion:<span class="required"></span></label>
+						<input class="input" type="text" name="direccion" id="direccion" value="" size="20"required>
+						<span class="form-helper"></span>
+					</div>
+					
+					<div class="form-linea">
+						<label for="codigo">Codigo Postal: <span class="required"></span></label>
+						<input class="input" type="text" name="codigo" id="codigo" value="" size="5"required>
+						<span class="form-helper"></span>
+					</div>
+					
+					<div class="form-linea">
+						<label for="ciudad">Ciudad:<span class="required"></span></label>
+						<input class="input" type="text" name="ciudad" id="ciudad" value="" size="20"required>
+						<span class="form-helper"></span>
+					</div>
+					
+					<div class="form-linea">
+						<label for="pais">Pais:<span class="required"></span></label>
+						<input class="input" type="text" name="pais" id="pais" value="" size="50"required>
+						<span class="form-helper"></span>
+					</div>
+					
+					<div class="form-linea">
+						<label for="tarjeta">Nº tarjeta:<span class="required"></span></label>
+						<input class="input" type="text" name="tarjeta" id="tarjeta" value="" size="16"required>
+						<span class="form-helper"></span>
+					</div>
+					
+					<div class="form-linea">
+						<label for="caducidad">Fecha de caducidad:<span class="required"></span></label>
+						<input class="input" type="text" name="caducidad" id="caducidad" value="" size="5"required>
+						<span class="form-helper"></span>
+					</div>
+					</br>
+					
+					<div class="form-submit">
+						<button type="submit" class="boton">REGISTRAR</button>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</article>
+</section>  
+</body>
+</html>

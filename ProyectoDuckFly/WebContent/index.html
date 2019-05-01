@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Duck-Fly</title>
+	<!-- Para que me aparezca las tildes -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
+	<link rel="shortcut icon" href="assets/images/patonejo-icon.png" />
+	
+	<!-- Para que despues de un tiempo me muestre un texto -->
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<script type="text/javascript">
+		function cargar(){
+			document.getElementById("titulo").innerHTML='<h1><b>Bienvenidos a DUCK FLY</b></h1></br><div id="index" align="center" size="100px">'
+			+'<input class="boton" id="entrar" type="submit" value="ENTRAR" onclick="location.href=acceder.html"></div>';
+		}
+	</script>
+</head>
+
+<body onload="setTimeout('cargar()',3000)">
+	<section>
+		<br>
+		<div class="logo">
+			<img src="assets/images/patonejo-icon.png" height="100%" width="100%"></img>
+		</div>
+		<br><br>
+		<div align="center" size="100px">
+			<h1 id="titulo" onclick="location.href='acceder.html'"><b> Bienvenidos a DUCK FLY</b></h1>
+		</div>
+	</section>	
+</body>
+</html>

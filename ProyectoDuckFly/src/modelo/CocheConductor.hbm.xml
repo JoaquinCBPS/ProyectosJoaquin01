@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 02-dic-2018 17:07:18 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="duckfly" dynamic-insert="false" dynamic-update="false" mutable="true" name="modelo.CocheConductor" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="coche_conductor">
+        <id name="idCocheConductor" type="java.lang.Integer">
+            <column name="idCocheConductor"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="modelo.Coche" embed-xml="true" fetch="select" insert="true" name="coche" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="10" name="matricula" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="modelo.Conductor" embed-xml="true" fetch="select" insert="true" name="conductor" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="9" name="dniConductor" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="fecha" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="fecha" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

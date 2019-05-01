@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 02-dic-2018 17:07:18 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="duckfly" dynamic-insert="false" dynamic-update="false" mutable="true" name="modelo.Viaje" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="viaje">
+        <id name="idViaje" type="java.lang.Integer">
+            <column name="idViaje"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="modelo.Cliente" embed-xml="true" fetch="select" insert="true" name="cliente" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="9" name="dniCliente" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="dniConductor" optimistic-lock="true" type="string" unique="false">
+            <column length="9" name="dniConductor"/>
+        </property>
+        <property generated="never" lazy="false" name="fechaViaje" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="fechaViaje" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="latitudInicial" optimistic-lock="true" type="double" unique="false">
+            <column name="latitudInicial" not-null="true" precision="22" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="longitudInicial" optimistic-lock="true" type="double" unique="false">
+            <column name="longitudInicial" not-null="true" precision="22" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="latitudFinal" optimistic-lock="true" type="double" unique="false">
+            <column name="latitudFinal" not-null="true" precision="22" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="longitudFinal" optimistic-lock="true" type="double" unique="false">
+            <column name="longitudFinal" not-null="true" precision="22" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="tiempoEspera" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="tiempoEspera"/>
+        </property>
+        <property generated="never" lazy="false" name="tiempoViaje" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="tiempoViaje"/>
+        </property>
+        <property generated="never" lazy="false" name="distanciaViaje" optimistic-lock="true" type="java.lang.Double" unique="false">
+            <column name="distanciaViaje" precision="22" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="precio" optimistic-lock="true" type="java.lang.Double" unique="false">
+            <column name="precio" precision="22" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="acabado" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="acabado"/>
+        </property>
+        <property generated="never" lazy="false" name="incidencia" optimistic-lock="true" type="string" unique="false">
+            <column length="400" name="incidencia"/>
+        </property>
+        <property generated="never" lazy="false" name="valoracionConductor" optimistic-lock="true" type="string" unique="false">
+            <column length="400" name="valoracionConductor"/>
+        </property>
+        <property generated="never" lazy="false" name="cocheXl" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="cocheXL"/>
+        </property>
+    </class>
+</hibernate-mapping>

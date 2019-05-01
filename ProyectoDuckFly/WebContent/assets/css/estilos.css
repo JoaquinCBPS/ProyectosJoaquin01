@@ -1,0 +1,273 @@
+/* Definición de estilos en un archivo HTML aparte */ 
+/*Estilo comun para todas las paginas*/
+*{
+	font-family: verdana;
+	margin:0px;
+	padding:0px;
+} 
+body {
+	background-image:url(../images/fondo.jpg);
+	background-size:cover;
+} 
+
+/*=======================================*/
+/*==== ESTILOS CON ELEMENTOS COMUNES ====*/
+/*=======================================*/
+/*Estilo de la imagen donde esta el logo*/
+.logo{
+	width:15%;
+	height:15%;
+	margin-left:auto;
+	margin-right:auto;
+	/*background:url(images/patonejo-icon.png) no-repeat center;*/
+}
+/*Estilo para la caja central y todo su contenido*/
+section{
+	width:60%;
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+/*Estilo para la caja donde estan los formularios*/
+article{
+	box-sizing:border-box;
+	margin-top: 50px;
+	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+}
+/*Estilo de los botones*/
+.boton{
+	width:100px;
+	height:25px;
+	margin-left:250px;
+	box-sizing:border-box;
+	text-align:center;
+	/*float:right;*/
+}
+#menu {
+	width:95%;
+	height:50px;
+	padding-top:25px;
+	padding-left:2%;
+	padding-right:2%;
+	margin-left:auto;
+	margin-right:auto;
+	background:silver;
+	text-align:left;
+}
+#menu a{
+	color:black;
+	text-decoration:none;
+}
+#menu a:hover{
+	background-color: black;
+	color:white;
+	text-decoration:none;
+}
+
+/*==============================*/
+/*==== ESTILOS DE INDEX.HTML ====*/
+/*==============================*/
+#entrar{
+	width:100px;
+	height:30px;
+	margin-left:auto;
+	margin-right:auto;
+}
+h1{
+	font-size:25px;
+}
+
+/*=================================*/
+/*==== ESTILOS DE ACCEDER.HTML ====*/
+/*=================================*/
+/*Estilo del formulario Acceder. Se introducen el usuario y password*/
+#form1{
+	
+}
+#conectate{
+	width:30%;
+	padding:3%;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:15px;
+	background:silver;
+	font-size:20px;
+	box-sizing:border-box;
+}
+#form1 input {
+	width:100px;
+	float:right;
+}
+#form1 .boton{
+	width:80px;
+}
+
+#registro{
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:3%;
+	border-radius:15px;
+	background:silver;
+	font-size:20px;
+	box-sizing:border-box;
+}
+#registro input{
+	width:100px;
+	float:right;
+}
+#registro p{
+	font-size:15px;
+}
+
+
+/*===================================*/
+/*==== ESTILOS DE REGISTRO.HTML ====*/
+/*===================================*/
+/*Estilos del formulario Registrarse. Solo se muestra si al introducir el usuario nos indica que no existe*/
+#form3{
+	
+}
+#registrate{
+	width:65%;
+	padding:3%;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:15px;
+	background:silver;
+	font-size:20px;
+	box-sizing:border-box;
+	/*display:none;*/
+}
+#registrate input{
+	width:150px;
+	float:right;
+}
+#registrate .boton{
+	width:100px;
+	height:25px;
+	float:right;
+}
+
+/*===================================*/
+/*==== ESTILOS DE SOLICITAR.HTML ====*/
+/*===================================*/
+#form4{
+	width:24%;
+	float:right;
+	position: absolute;
+    top: 40%;
+	right:22%;
+}
+#solicitar{
+	width:95%;
+}
+#solicita {
+	width:95%;
+	padding:2%;
+	float:right;
+    /*position: absolute;
+    top: 31%;
+	right:22%;*/
+	border-radius:15px;
+	background:silver;
+	font-family: comic;
+	font-size:20px;
+	box-sizing:border-box;
+}
+#map{
+	border: 3px solid black;
+}
+#form4 input{
+	width:100px;
+}
+#form4 .boton{
+	width:100px;
+}
+
+/*=====================================*/
+/*==== ESTILOS DE INFORMACION ====*/
+/*=====================================*/
+/*#informacion{
+	width:80%;
+	padding:3%;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:15px;
+	background:silver;
+	font-family: comic;
+	font-size:20px;
+	box-sizing:border-box;
+	display: none;
+}
+*/
+#form5{
+	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#form5 fieldset{
+	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#form5 input{
+	float:right;
+}
+#verDatos{
+	width:35%;
+	padding:2%;
+	text-align:center;
+	background:silver;
+	margin-left:auto;
+	margin-right:auto;
+}
+#verViajes{
+	width:90%;
+	padding:2%;
+	text-align:center;
+	background:silver;
+	margin-left:auto;
+	margin-right:auto;
+}
+table{
+	border: 3px solid black;
+	width:100%;
+	padding:1%;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+tr{
+	
+}
+td{
+	padding:1%;
+}
+
+#index{
+	width:50%;
+	height:50%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+#gif {
+	border: 3px solid black;
+	width:90%;
+	height:90%;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:silver;
+}
+#form6 input{
+	
+}
+
+
+
+
+
+

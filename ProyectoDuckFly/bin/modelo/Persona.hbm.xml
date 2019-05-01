@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 02-dic-2018 17:07:18 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="duckfly" dynamic-insert="false" dynamic-update="false" mutable="true" name="modelo.Persona" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="persona">
+        <id name="dniPersona" type="string">
+            <column length="9" name="dniPersona"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="nombre" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="nombre" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="apellidos" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="apellidos" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="email" not-null="true" unique="true"/>
+        </property>
+        <property generated="never" lazy="false" name="telefono" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="telefono" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="fechaNacimiento" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="fechaNacimiento" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="direccion" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="direccion" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="codigoPostal" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="codigoPostal" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="ciudad" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="ciudad" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="pais" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="pais" not-null="true"/>
+        </property>
+        <one-to-one class="modelo.Cliente" constrained="false" embed-xml="true" name="cliente"/>
+        <one-to-one class="modelo.Conductor" constrained="false" embed-xml="true" name="conductor"/>
+    </class>
+</hibernate-mapping>

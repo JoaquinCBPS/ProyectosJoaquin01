@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 02-dic-2018 17:07:18 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="duckfly" dynamic-insert="false" dynamic-update="false" mutable="true" name="modelo.Cliente" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="cliente">
+        <id name="dniCliente" type="string">
+            <column length="9" name="dniCliente"/>
+            <generator class="foreign">
+                <param name="property">persona</param>
+            </generator>
+        </id>
+        <one-to-one class="modelo.Persona" constrained="true" embed-xml="true" name="persona"/>
+        <property generated="never" lazy="false" name="nombreUsuario" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="nombreUsuario" not-null="true" unique="true"/>
+        </property>
+        <property generated="never" lazy="false" name="contrasenia" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="contrasenia" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="numeroTarjeta" optimistic-lock="true" type="string" unique="false">
+            <column length="16" name="numeroTarjeta" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="fechaCaducidad" optimistic-lock="true" type="string" unique="false">
+            <column length="5" name="fechaCaducidad" not-null="true"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="viajes" optimistic-lock="true" sort="unsorted" table="viaje">
+            <key on-delete="noaction">
+                <column length="9" name="dniCliente" not-null="true"/>
+            </key>
+            <one-to-many class="modelo.Viaje" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

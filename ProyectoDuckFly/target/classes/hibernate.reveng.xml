@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="duckfly" match-name="cliente"/>
+  <table-filter match-catalog="duckfly" match-name="coche"/>
+  <table-filter match-catalog="duckfly" match-name="conductor"/>
+  <table-filter match-catalog="duckfly" match-name="persona"/>
+  <table-filter match-catalog="duckfly" match-name="viaje"/>
+  <table-filter match-catalog="duckfly" match-name="coche_conductor"/>
+</hibernate-reverse-engineering>

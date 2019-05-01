@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">1212</property>
+        <property name="hibernate.connection.url">jdbc:mysql://10.90.37.27:3306/duckfly</property>
+        <property name="hibernate.connection.username">curso</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping resource="modelo/Persona.hbm.xml"/>
+        <mapping resource="modelo/Conductor.hbm.xml"/>
+        <mapping resource="modelo/CocheConductor.hbm.xml"/>
+        <mapping resource="modelo/Viaje.hbm.xml"/>
+        <mapping resource="modelo/Cliente.hbm.xml"/>
+        <mapping resource="modelo/Coche.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

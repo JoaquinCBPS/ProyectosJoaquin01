@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 02-dic-2018 17:07:18 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="duckfly" dynamic-insert="false" dynamic-update="false" mutable="true" name="modelo.Conductor" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="conductor">
+        <id name="dniConductor" type="string">
+            <column length="9" name="dniConductor"/>
+            <generator class="foreign">
+                <param name="property">persona</param>
+            </generator>
+        </id>
+        <one-to-one class="modelo.Persona" constrained="true" embed-xml="true" name="persona"/>
+        <property generated="never" lazy="false" name="fechaInicioContrato" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="fechaInicioContrato" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="salario" optimistic-lock="true" type="double" unique="false">
+            <column name="salario" not-null="true" precision="22" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="disponible" optimistic-lock="true" type="boolean" unique="false">
+            <column name="disponible" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="numeroLicencia" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="numeroLicencia" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="numeroSeguridadSocial" optimistic-lock="true" type="string" unique="false">
+            <column length="12" name="numeroSeguridadSocial" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="valoracionMedia" optimistic-lock="true" type="java.lang.Double" unique="false">
+            <column name="valoracionMedia" precision="22" scale="0"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="cocheConductors" optimistic-lock="true" sort="unsorted" table="coche_conductor">
+            <key on-delete="noaction">
+                <column length="9" name="dniConductor" not-null="true"/>
+            </key>
+            <one-to-many class="modelo.CocheConductor" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>
